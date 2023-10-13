@@ -47,5 +47,8 @@ public class bookRequest {
                 System.out.println("ISBN"+ISBN);
                 System.out.println("due DATE"+dueDATE);
                 System.out.println("return date"+returnDate);  
+                
+                
+                System.out.println("upload file");
             }
 }
