@@ -27,7 +27,7 @@
 }
 .heading-box-C
 {
-    width: 30%;
+    width: 40%;
     display: block;
 }
 /*design search box*/
@@ -44,6 +44,8 @@
     font-size: large;
     border: none;
     border-bottom: 2px solid black;
+    outline: none;
+    
 }
 #search-icon
 {
@@ -72,7 +74,7 @@
     width: 100%;
     font-size: 25px;
     position: fixed;/*fixed the icon*/
-    top: 10px;
+    top: 46px;
     left: 10px;
     
 }
@@ -139,7 +141,8 @@
     height: 50%;
     left: 25%;
     margin-top: 2%;
-    box-shadow: 0px 7px 29px 0px rgba(50, 50, 54, 0.2);
+    box-shadow: 0px 7px 29px 0px rgba(10, 10, 10, 0.2);
+    border-radius: 10px;
 }
 #slide
 {
@@ -147,8 +150,6 @@
 }
 #slide .picture
 {
-    width: 30%;
-    height: 30%;
     background-position: 50% 50%;
     display: inline-block;
     background-size: cover; /*attribute that prevent photos from being broken*/
@@ -164,16 +165,16 @@
     top: 0;
     transform: translate(0, 0);
     width: 100%;
-    height: 100%;
+    height: 110%;
     z-index: 2;
-    border-radius: none;
+    border-radius: 10px;
 }
 
 #slide .picture:nth-child(2)
 {
     left: 95%;
     width: 55%;
-    height: 90%;
+    height: 95%;
     z-index: 1;
     transform: translate(0, 0);
     border-radius: 20px;/*rounded imagine corners*/
@@ -182,8 +183,9 @@
 {
     right: 95%;
     width: 90%;
-    height: 90%;
+    height: 95%;
     z-index: 1;
     transform: translate(0, 0);
     border-radius: 20px;/*rounded imagine corners*/
+    box-shadow: 10px #888787;
 }
