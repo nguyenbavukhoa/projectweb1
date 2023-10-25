@@ -66,23 +66,38 @@
 #item .item-box
 {
     width: 30%;
+    font-size: 120%;
     display: block;
+    margin-top: 5%
+}
+#item .item-box a
+{
+    text-decoration: none;
+    color: black;
+    cursor: pointer; /*Converts pointer to hand*/
+}
+#item .item-box a:hover
+{
+    opacity: 0.5;/*make transparent*/
 }
 /*item to top of page*/
 #item-home
 {
-    font-size: 25px;
+    opacity: 0.7;/*make transparent*/
     position: fixed;/*fixed the icon*/
-    top: 46px;
-    left: 10px;
-    
+    bottom: 2px;
+    z-index: 6;/*stack of images*/    
+}
+#item-home:hover
+{
+    opacity: 1;
 }
 /*design menu*/
 #main-menu 
 {
     margin-top: 2%;
     width: 100%;
-    height: 40px;
+    height: 50px;
     display: flex;
     background-color: #f1f1f1;
     z-index: 5;
@@ -136,7 +151,7 @@
 #advertisement
 {
     width: 100%;
-    height: 550px;
+    height: 585px;
     position: relative;
 }
 #slide
@@ -146,8 +161,7 @@
     height: 50%;
     left: 28.5%;
     margin-top: 2%;
-    border-radius: 10px;
-    
+    border-radius: 10px;  
 }
 #slide .picture
 {
@@ -159,7 +173,6 @@
     transform: translate(0, 30%);
     z-index: 1; /*stack of images*/
     box-shadow: 0px 7px 29px 0px rgba(10, 10, 10, 0.2);
-    
 }
 
 #slide .picture:nth-child(1)
@@ -172,7 +185,6 @@
     z-index: 2;
     border-radius: 10px;
 }
-
 #slide .picture:nth-child(2)
 {
     left: 88%;
@@ -197,11 +209,70 @@
 /*design buttons*/
 .buttons
 {
-    margin-top:450px;
+    margin-top:490px;
     text-align: center;
     margin-left: -18%;
 }
-/*design information of shop*/
+/*design body*/
+#body
+{
+    width: 80%;
+    margin-left: 10%;
+    flex-wrap: wrap;
+    margin-top: 2%;
+}
+.title-body img
+{
+    align-items: center;
+}
+.title-body H1
+{
+    text-align: center;
+    font-family:cursive;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 1%;
+}
+.body-box
+{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;/*align center for product box*/
+}
+.body-box-item
+{
+    margin-top: 2%;
+    width: 240px;
+    height: 330px;
+    margin-left: 3%;
+    /*border: 1px solid #0e0d0d;/*temporary attribute*/
+    display: flex;
+    flex-direction: column;
+}   
+.body-box-item:hover
+{
+    box-shadow: 0px 7px 29px 0px rgba(154, 151, 151, 0.2);
+}
+.body-box-item img
+{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 1%;
+}
+.body-box-item p
+{
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 1%;
+}
+.body-box-item div
+{
+    display: flex;
+    justify-content: center;
+}
+/*design footer of shop*/
 #footer
 {
     width: 100%;
@@ -225,6 +296,7 @@
 {
     margin-left: -20px;
 }
+
 .info-contact
 {
     display: flex;
