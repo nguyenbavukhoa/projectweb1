@@ -247,7 +247,8 @@
     margin-top: 2%;
     width: 240px;
     height: 330px;
-    margin-left: 3%;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
     /*border: 1px solid #0e0d0d;/*temporary attribute*/
     display: flex;
     flex-direction: column;
