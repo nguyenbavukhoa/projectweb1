@@ -227,7 +227,20 @@
 }
 #sidebar li{
     margin-top: 15px;
+    width: 100%;
+    position: relative;
+    list-style: none;
 }
+#sidebar li a{
+    text-decoration: none;
+    color: black;
+    padding: 7px 20px;
+    font-size: 20px;
+}
+#sidebar li a :hover{
+    color: rgb(225, 96, 21);
+}
+
 /* total of body*/
 #body{
     flex-basis: 70%;
