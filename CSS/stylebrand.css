@@ -224,20 +224,33 @@
 /* design menu*/
 #sidebar{
     flex-basis: 20%;
+    
+
+    
+    height: 20%;
+    text-align: center;
 }
-#sidebar li{
+#sidebar li {
+    border-bottom: 2px solid black;
     margin-top: 15px;
     width: 100%;
     position: relative;
     list-style: none;
 }
-#sidebar li a{
+
+#sidebar  li a {
+    
     text-decoration: none;
-    color: black;
+    color:black;
     padding: 7px 20px;
     font-size: 20px;
 }
-#sidebar li a :hover{
+#sidebar  li a h1{
+    text-decoration: none;
+    padding: 7px 20px;
+    
+}
+#sidebar  li  :hover{
     color: rgb(225, 96, 21);
 }
 
