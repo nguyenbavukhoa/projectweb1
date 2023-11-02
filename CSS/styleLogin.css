@@ -2,6 +2,14 @@
     margin: 0;
     padding: 0;
 }
+#heading
+{
+    width: 100%;
+    height: 70px;
+    background-color: white;
+    align-items: center;
+    display: flex;
+}
 #frame
 {
     z-index: 1;
