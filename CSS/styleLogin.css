@@ -4,32 +4,60 @@
 }
 #frame
 {
-    width: 40%;
-    height: 418px;
-    margin: 1.99% 30%;
+    width: 30%;
+    height: 450px;
     display: flex;
     flex-wrap: wrap;
     border-radius: 30px;
     border: 1px solid black;
     text-align: center;
+    transform: translate(200%,25%);
 }
 .heading
 {
     width: 100%;
-
-
-
-
-
-
-
-
-
-    
     height: max-content;
     background-color: #f1f1f1;    
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
     display: block;
     padding:20px;
+}
+.body
+{
+    height: 50%;
+    width: 100%;
+    display: block;
+}
+#search-box
+{
+    padding: 2% 5%;
+    width: 90%;
+    height: 60px;
+}
+.button
+{
+    background-color: #f1f1f1;
+    margin: 2% 5%;
+    text-align: center;
+    width: 90%;
+    height: 60px;
+}
+.button:hover
+{
+    background-color: rgb(251, 189, 189);
+    margin: 2% 5%;
+    cursor: pointer;
+}
+.button h1
+{
+    font-size: 25px;
+    font-weight: 500;
+    padding: 17px;
+}
+.footer
+{
+    height: 22%;
+    width: 100%;
+    display: block;
 }
