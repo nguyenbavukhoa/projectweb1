@@ -1,28 +1,54 @@
-const next = document.querySelector('.next')
-const prev = document.querySelector(".prev")
-const comment = document.querySelector('#list-comment')
-const commentItem = document.querySelectorAll('#list-comment .item')
-var translateY = 0
-var count = commentItem.length
 
+let thisPage = 1;
+let limit = 3;
+let list = document.querySelectorAll('.list .item');
 
-next.addEventListener('click', function (event) {
-    event.preventDefault()
-    if(count == 1){
-    //click len c
-return false
-    }
-    translateY += -400
-    comment.style.transform = `translateY(${translateY}px)`
-    count --
-})
-prev.addEventListener('click', function (event){
-    event.preventDefault()
-    if(count==4)
+function loadItem(){
+    let beginGet = limit * (thisPage - 1);
+    let endGet = limit * thisPage -1;
+    list.forEach((item, key)=>{
+        if(key >= beginGet && key <= endGet){
+            item.style.display = 'block';
+        }else{
+            item.style.display = 'none';
+        }
+    listPage();
+});
+}
+loadItem();
+function listPage(){
+    let count = Math.ceil(list.length / limit);
+    document.querySelector('.listPage').innerHTML = '';
+    
+    if(thisPage != 1)
     {
-        return false
+        let prev = document.createElement('li');
+        prev.innerHTML = 'PREV';
+        prev.setAttribute('onclick', "changePage("+ i +")");
+        document.querySelector('.listPage').appendChild(prev);
     }
-    translateY +=400
-    comment.style.transform = `translateY(${translateY}px)`
-    count ++
-})
+    
+    for(i = 1; i <= count; i++){
+        let newPage = document.createElement('li');
+        newPage.innerHTML = i;
+        if(i == thisPage){
+            newPage.classList.add('active');
+        }
+        newPage.setAttribute('onclick', "changePage(" + i + ")");
+        document.querySelector('.listPage').appendChild(newPage);
+    }
+
+    if(thisPage != count)
+    {
+        let next = document.createElement('li');
+        next.innerHTML = 'NEXT';
+        next.setAttribute('onclick', "changePage("+ i +")");
+        document.querySelector('.listPage').appendChild(next);
+    }
+
+}
+
+function changePage(i) {
+    thisPage = i;
+    loadItem();
+}
