@@ -24,7 +24,7 @@ function listPage(){
     {
         let prev = document.createElement('li');
         prev.innerHTML = 'PREV';
-        prev.setAttribute('onclick', "changePage("+ i +")");
+        prev.setAttribute('onclick', "changePage("+(thisPage-1) +")");
         document.querySelector('.listPage').appendChild(prev);
     }
     
@@ -42,7 +42,7 @@ function listPage(){
     {
         let next = document.createElement('li');
         next.innerHTML = 'NEXT';
-        next.setAttribute('onclick', "changePage("+ i +")");
+        next.setAttribute('onclick', "changePage("+ (thisPage+1) +")");
         document.querySelector('.listPage').appendChild(next);
     }
 
@@ -52,3 +52,109 @@ function changePage(i) {
     thisPage = i;
     loadItem();
 }
+
+
+let List = document.getElementById('list');
+let filter = document.querySelector('.filter');
+let count = document.getElementById('count');
+let listProducts = [
+    {
+        id: 1,
+        name: 'Skin 1004 Hyalu- Cica Toner1',
+        price: 22.00,
+        quantyti:0,
+        image: 'face6.jpg',
+        nature: {
+            color:['blue'],
+            size: ['M', 'L'],
+            type:'Toner'
+        }
+    },
+    {
+        id: 2,
+        name:'Skin 1004 Serum Centella8',
+        price:22.00,
+        quantyti:1,
+        image: 'face2.jpg',
+        nature:{
+            color:['golden'],
+            size:['M','S'],
+            type:'Serum'
+        }
+    },
+    {
+        id: 3,
+        name:'Unove Deep Damage Treatment EX9',
+        price:22.00,
+        quantyti:2,
+        image:'hair3.webp',
+        nature:{
+            color:['pink'],
+            size:['S'],
+            type:'Damage Treatment'
+        }
+    },
+    {
+        id: 4,
+        name:'Skin 1004 Hyalu-Cica Serum',
+        price:22.00,
+        quantyti:3,
+        image:'face7.webp',
+        nature:{
+            color:['blue'],
+            size:['S'],
+            type:'Serum'
+        }
+    },
+    {
+        id: 5,
+        name:'Skin 1004 Centella Toner11',
+        price:22.00,
+        quantyti:4,
+        image:'face8.jpg',
+        nature:{
+            color:['golden'],
+            size:['S'],
+            type:'Toner'
+        }
+    },
+    {
+        id:6,
+        name:'Paula Choice Weightless Body Treatment 2% BHA12',
+        price:22.00,
+        quantyti:5,
+        image:'body3.jpg',
+        nature:{
+            color:['purple'],
+            size:['L'],
+            type:'Body Treatment'
+        }
+    }
+   
+
+];
+let productFilter = listProducts;
+showProduct(productFilter);
+function showProduct(productFilter){
+   count.innerText = productFilter.length;
+   list.innerHTML = '';
+   productFilter.forEach(item =>{
+let newItem = document.createElement('div');
+    newItem.classList.add('item');
+
+
+    let newImage = new Image();
+    newImage.src = item.image;
+    newItem.appendChild(newImage);
+
+    let newTitle = document.createElement('div');
+    newTitle.classList.add('title');
+    newTitle.innerText = item.name;
+    newItem.appendChild(newTitle);
+
+list.appendChild(newItem);   
+});
+   }
+   filter.addEventListener('sumit',function(event){
+    alert('1111');
+   })

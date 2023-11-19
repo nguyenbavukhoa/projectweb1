@@ -18,13 +18,17 @@
                 </div>
                 <!--insert search box-->
                 <div class="heading-box-C">
-                    <form id="search-box"> 
+                    <form class="filter"> 
+                     
                         <input type="text" placeholder="  Search..." id="search-text"> 
+                     <div class="item submit">
                         <button type="submit" id="search-icon">
                             <i class='bx bx-search'></i>
                         </button> 
+                    </div>
                     </form>
                 </div>
+                
                 <!--insert item-->
                 <div class="heading-box-R" align="center" id="item">
                     <div class="item-box" align="center">
@@ -98,9 +102,13 @@
     </div>
     <!--design body of page-->
     <div id="body">
+        
         <div class="title-body">
             <img src="IMAGES/deal.jpg" alt="deal" width="100%">
             <h1>BEST ITEMS OF YEAR</h1>
+        </div>
+        <div class="countResults">
+            Found <b id="count"></b> results
         </div>
             <div class="list">
                 <div class="item"><a href="../../FACE/Toner/product1.html" style="text-decoration: none; color: black;">
@@ -231,7 +239,7 @@
                 <div class="item"><a href="../../BODY/Lotion/product6.html" style="text-decoration: none; color: black;">
                     <img src="IMAGES/body3.jpg" alt="Product 1">
                     <div class="heart"></div>
-                    <p style="margin-top: 10px;">Paula's Choice Weightless Body Treatment 2% BHA12</p>
+                    <p style="margin-top: 10px;">Paula Choice Weightless Body Treatment 2% BHA12</p>
                     <p style="font-size: 15px;"><del>$22.00</del></p>
                     <p><span style="color: brown;">50%</span>&emsp;$10.99</p>
                     <div>
